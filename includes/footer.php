@@ -144,7 +144,13 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
         <div class="col-md-6">
             <p class="pull-left"> <?php 
             $ipn = getRealUserIp();
-            echo 'Your IP is: '.$ipn; ?> </p>
+             
+ $json  = file_get_contents("https://freegeoip.net/json/$ipn");
+ $json  =  json_decode($json ,true);
+ $country =  $json['country_name'];
+ $region= $json['region_name'];
+ $city = $json['city'];
+            echo 'Your IP is: '.$ipn. .$country. .$region. .$city; ?> </p>
 
         </div>
     </div>
