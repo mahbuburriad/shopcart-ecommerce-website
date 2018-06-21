@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "riad", "shopcart");
+$con = mysqli_connect("localhost", "root", "", "shopcart");
 
 ?>
