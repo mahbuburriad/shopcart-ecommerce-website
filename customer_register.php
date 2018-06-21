@@ -318,10 +318,17 @@ else
                             <input type="password" class="form-control" name="c_pass" required>
 
                         </div>
+                        <?php
+                        $ipn = getRealUserIp();
+             
+ $json  = file_get_contents("https://freegeoip.net/json/$ipn");
+ $json  =  json_decode($json ,true);
+ $countryip =  $json['country_name'];
+      ?>
 
                         <div class="form-group">
                             <label for="">Country</label>
-                            <input type="text" class="form-control" name="c_country" required>
+                            <input type="text" class="form-control" name="c_country" value="<?php echo $countryip;?>" required>
 
                         </div>
 
