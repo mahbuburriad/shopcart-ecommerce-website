@@ -77,7 +77,18 @@ else
                     <ul class="menu">
                         <!--menu starts-->
 
-                        <li><a href="customer_register.php">Registers</a></li>
+                        <li>
+                        <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo "<a href='customer_register.php'>Register</a>";
+                            }
+                            else
+                            {
+                                echo "<a href='cart.php'>Shopping Cart</a>";
+                            }
+                            ?>
+                        
+                        </li>
                         <li>
                             <?php
                             if(!isset($_SESSION['customer_email'])){
@@ -169,14 +180,18 @@ else
                             <a href="customer/my_account.php"> My Account </a>
                         </li>
                         <li>
-                            <a href="cart.php"> Shopping Cart </a>
-                        </li>
+                          
+
+                          <?php
+                          include("additional_info.php");
+
+                          ?>
+                         
+                      </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        <li>
-                            <a href="app/shopcart.apk">Site APP</a>
-                        </li>
+                        
 
                     </ul>
 

@@ -130,9 +130,17 @@ include("functions/functions.php");
                         <li>
                             <a href="checkout.php"> My Account </a>
                         </li>
-                        <li class="active">
-                            <a href="cart.php"> Shopping Cart </a>
-                        </li>
+                       
+
+                        <li>
+                          
+
+                          <?php
+                          include("additional_info.php");
+
+                          ?>
+                         
+                      </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
