@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2018 at 10:48 PM
+-- Generation Time: Jun 22, 2018 at 08:57 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -45,7 +45,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`, `admin_country`, `admin_job`, `admin_about`) VALUES
-(5, 'Admin Demo', 'demo@gmail.com', '123456', 'Riad.jpg', '33456693', 'Bangladesh', 'Developer', '  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical  ');
+(5, 'Admin Demo', 'demo@gmail.com', '123456', 'Riad.jpg', '33456693', 'Bangladesh', 'Developer', '  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical  '),
+(9, 'Mysha Rahman', 'mysha.rahman@northsouth.edu', '123456', '2017-09-02-18-33-21-409.jpg', '01654545454545', 'Bangladesh', 'Web Developer', ' Web Developer of North South.');
 
 -- --------------------------------------------------------
 
@@ -66,8 +67,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
-(3, '::1', 6, 1000, 'Small'),
-(6, '::1', 12, 1500, 'Small');
+(6, '::1', 1, 1500, 'Small'),
+(9, '::1', 1, 5500, 'Small');
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,8 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_desc`) VALUES
 (1, 'Man', 'errgsdfg'),
 (2, 'Woman', 'sdfgsg'),
 (3, 'Kids', 'sfdgsdfg'),
-(6, 'hfad', 'sfgsdgf');
+(6, 'hfad', 'sfgsdgf'),
+(7, 'Others', 'Everything extra....\r\n\r\n');
 
 -- --------------------------------------------------------
 
@@ -112,7 +114,8 @@ CREATE TABLE `coupons` (
 --
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
-(4, 7, 'Gold', '400', 'riadx ', 100, 15);
+(4, 7, 'Gold', '400', 'riadx ', 100, 16),
+(5, 9, 'eid', '5400', 'eid2018', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -141,7 +144,8 @@ CREATE TABLE `customers` (
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
 (1, 'Mahbubur Riad', 'demo@gmail.com', '123456', 'Bangladesh', 'Dhaka', '01711574805', 'Nikunja 2, Dhaka, Bangladesh', '28279338_1826096224114456_3886215294656287949_n.jpg', '127.0.0.1', ''),
 (3, 'Mysha', 'mysha@gmail.com', '123456', 'Bangladesh', 'Dhaka', '34567890-', 'tfygiuhf adfasdf ', 'product-image (7).png', '::1', '145677'),
-(4, 'Mahbubur Rahman', 'mahbubur.riad@outlook.com', '123456', 'Bangladesh', 'Dhaka', '234567890', 'jjj adfasdf', '2.jpg', '::1', '');
+(4, 'Mahbubur Rahman', 'mahbubur.riad@outlook.com', '123456', 'Bangladesh', 'Dhaka', '234567890', 'jjj adfasdf', '2.jpg', '::1', ''),
+(5, 'mysha rahman', 'mysha.rahman@northsouth.edu', '123456', 'bangladesh', 'dhaka', '018383838838', 'dhanmondi', '2017-09-02-18-33-21-409.jpg', '::1', '');
 
 -- --------------------------------------------------------
 
@@ -182,7 +186,10 @@ INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice
 (15, 4, 2070, 1396932563, 1, 'Small', '2018-06-18 11:57:50', 'pending'),
 (16, 4, 1252, 182811974, 3, 'Small', '2018-06-18 11:59:04', 'pending'),
 (17, 4, 22520, 182811974, 4, 'Small', '2018-06-18 11:59:04', 'pending'),
-(18, 1, 5163, 1311328606, 5, 'Small', '2018-06-18 18:45:43', 'pending');
+(18, 1, 5163, 1311328606, 5, 'Small', '2018-06-18 18:45:43', 'pending'),
+(19, 5, 16385, 1599844595, 4, 'Medium', '2018-06-22 18:32:26', 'Complete'),
+(20, 5, 1252, 1599844595, 3, 'Small', '2018-06-22 18:36:34', 'Complete'),
+(21, 5, 5572, 1283089109, 1, 'Small', '2018-06-22 18:48:12', 'pending');
 
 -- --------------------------------------------------------
 
@@ -236,7 +243,9 @@ INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `r
 (5, 1296941894, 8230, 'Visa/Master Card', 'demo@gmail.com', 22, '12/16/14'),
 (6, 1296941894, 8230, 'Visa/Master Card', '125', 12, '12/11/14'),
 (7, 1296941894, 8230, 'Bkash', '545', 51, '12/16/14'),
-(9, 645138746, 2095, 'Dutch Bangla Mobile', '3456', 234, '14-12-18');
+(9, 645138746, 2095, 'Dutch Bangla Mobile', '3456', 234, '14-12-18'),
+(10, 1599844595, 16385, 'Bkash', 'mysha.rahman@northsouth.edu', 123456, '14-12-14'),
+(11, 1599844595, 1252, 'Bkash', 'mysha.rahman@northsouth.edu', 123456, '14-12-14');
 
 -- --------------------------------------------------------
 
@@ -275,7 +284,10 @@ INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_
 (15, 4, 1396932563, '7', 1, 'Small', 'pending'),
 (16, 4, 182811974, '7', 3, 'Small', 'pending'),
 (17, 4, 182811974, '9', 4, 'Small', 'pending'),
-(18, 1, 1311328606, '3', 5, 'Small', 'pending');
+(18, 1, 1311328606, '3', 5, 'Small', 'pending'),
+(19, 5, 1599844595, '5', 4, 'Medium', 'Complete'),
+(20, 5, 1599844595, '7', 3, 'Small', 'Complete'),
+(21, 5, 1283089109, '9', 1, 'Small', 'pending');
 
 -- --------------------------------------------------------
 
@@ -439,31 +451,31 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `coupons`
 --
 ALTER TABLE `coupons`
-  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `manufacturers`
@@ -475,13 +487,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `payment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `products`
