@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2018 at 08:57 PM
+-- Generation Time: Jun 22, 2018 at 09:34 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -115,7 +115,8 @@ CREATE TABLE `coupons` (
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
 (4, 7, 'Gold', '400', 'riadx ', 100, 16),
-(5, 9, 'eid', '5400', 'eid2018', 1, 1);
+(5, 9, 'eid', '5400', 'eid2018', 1, 1),
+(6, 3, 'Bonus', '950', 'Bonus', 6, 0);
 
 -- --------------------------------------------------------
 
@@ -463,7 +464,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `coupons`
 --
 ALTER TABLE `coupons`
-  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `coupon_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customers`
