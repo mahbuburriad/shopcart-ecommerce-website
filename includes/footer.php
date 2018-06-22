@@ -134,15 +134,16 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
 <div id="copyright">
 
     <div class="container">
-    <div class="row">
-    </div>
+        <div class="row">
+        </div>
 
         <div class="col-md-6">
             <p class="pull-left"> &copy; 2018 Mysha Rahman &amp; Mahbubur Rahman </p>
 
         </div>
         <div class="col-md-6">
-            <p class="pull-left"> <?php 
+            <p class="pull-left">
+                <?php 
             $ipn = getRealUserIp();
              
  $json  = file_get_contents("https://freegeoip.net/json/$ipn");
@@ -150,7 +151,7 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
  $country =  $json['country_name'];
  $region= $json['region_name'];
  $city = $json['city'];
-            echo 'Your IP is: '.$ipn. .$country. .$region. .$city; ?> </p>
+            echo 'Your IP is: '.$ipn.' '.$country.' '.$region.' '.$city; ?> </p>
 
         </div>
     </div>

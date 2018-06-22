@@ -273,31 +273,60 @@ else
                 </div>
 
 
+
+
+
+
+
                 <div class="col-md-9">
                     <div class="box">
+                        <?php/*
+            $customer_session= $_SESSION['customer_email'];
+            $get_customer = "SELECT * FROM customers WHERE customer_email='$customer_session'";
+            $run_customer = mysqli_query($con, $get_customer);
+            $row_customer = mysqli_fetch_array($run_customer);
+            $customer_id = $row_customer['customer_id'];
+    
+            $get_o_order = "SELECT * FROM customer_orders WHERE customer_id = '$customer_id' AND order_id='$order_id'";
+            $run_o_orders = mysqli_query($con, $get_o_order);
+            $row_o_orders = mysqli_fetch_array($run_o_orders);
+    $order_ids= $row_o_orders['order_id'];
+    
+    
+    
+    $get_p_order = "SELECT * FROM pending_orders WHERE customer_id = '$customer_id' AND order_id='$order_ids'";
+            $run_p_order = mysqli_query($con, $get_p_order);
+            $row_p_order = mysqli_fetch_array($run_p_order);
+            $invoice_no = $row_p_order['invoice_no'];
+    
+            $get_order = "SELECT * FROM customer_orders WHERE invoice_no = '$invoice_no'";
+            $run_orders = mysqli_query($con, $get_order);
+            while($row_orders = mysqli_fetch_array($run_orders)){
+                $due_amount = $row_orders['due_amount'];*/
+            ?>
 
 
 
 
-                        <h1 align="center"> Please Confirm Your Payment </h1>
+                            <h1 align="center"> Please Confirm Your Payment </h1>
 
-                        <form action="confirm.php?update_id=<?php echo $order_id;?>" method="post" enctype="multipart/form-data">
+                            <form action="confirm.php?update_id=<?php echo $order_id;?>" method="post" enctype="multipart/form-data">
 
-                            <div class="form-group">
-                                <label for="">Invoice No.</label>
-                                <input type="text" class="form-control" name="invoice_no" required>
-
-
-                            </div>
-                            <div class="form-group">
-                                <label for="">Amount Sent</label>
-                                <input type="text" class="form-control" name="amount_sent" required>
+                                <div class="form-group">
+                                    <label for="">Invoice No.</label>
+                                    <input type="text" class="form-control" name="invoice_no" required>
 
 
-                            </div>
-                            <div class="form-group">
-                                <label for="">Select Payment Method</label>
-                                <select name="payment_mode" class="form-control" id="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Amount Sent</label>
+                                    <input type="text" class="form-control" name="amount_sent" required>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Select Payment Method</label>
+                                    <select name="payment_mode" class="form-control" id="">
                               <option >Select Payment Method</option>
                               <option >Visa/Master Card</option>
                               <option>Bkash</option>
@@ -307,37 +336,37 @@ else
                           </select>
 
 
-                            </div>
-                            <div class="form-group">
-                                <label for="">Transection/Refference Id</label>
-                                <input type="text" class="form-control" name="ref_no" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Transection/Refference Id</label>
+                                    <input type="text" class="form-control" name="ref_no" required value="<?php echo $customer_session; ?>">
 
 
-                            </div>
-                            <div class="form-group">
-                                <label for="">Bkash Code</label>
-                                <input type="text" class="form-control" name="code">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Bkash Code</label>
+                                    <input type="text" class="form-control" name="code">
 
 
-                            </div>
-                            <div class="form-group">
-                                <label for="">Payment Date</label>
-                                <input type="text" class="form-control" name="date" required>
-                            </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Payment Date</label>
+                                    <input type="text" class="form-control" name="date" required>
+                                </div>
 
 
-                            <div class="text-center">
-                                <button type="submit" name="confirm_payment" class="btn btn-primary btn-lg">
+                                <div class="text-center">
+                                    <button type="submit" name="confirm_payment" class="btn btn-primary btn-lg">
                                <i class="fas fa-money-bill-alt"></i> Confirm Payment
                                
                            </button>
 
-                            </div>
+                                </div>
 
-                        </form>
+                            </form>
 
 
-                        <?php
+                            <?php
 
         if(isset($_POST['confirm_payment'])){
 
@@ -401,4 +430,6 @@ else
 
     </html>
 
-    <?php } ?>
+    <?php } 
+ 
+?>
