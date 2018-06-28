@@ -473,7 +473,7 @@ Information That save in our database
 <br>
 <br>
 
-<a style='background-color: #af0c42; text-decoration: none; padding: 10px; font-size: 130%; color: white; margin-top:20px;' href='http://blazing.cf/shopcart/shopcart/customer/my_account.php?$customer_confirm_code'>
+<a style='background-color: #af0c42; text-decoration: none; padding: 10px; font-size: 130%; color: white; margin-top:20px;' href='http://www.shopcart.cf/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email
 </a>
 ";
