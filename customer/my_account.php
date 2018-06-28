@@ -322,12 +322,12 @@ else
     if(isset($_GET['send_email'])){
         
         $subject = "Shopcart Email Confirmation Message";
-$from = "mahbubur.riad@gmail.com";
+$from = "admin@shopcartbd.cf";
 $message = "
 <h2>
 Email Confirmation By Shopcart $c_name
 </h2>
-<a href='http://www.shopcart.cf/customer/my_account.php?$customer_confirm_code'>
+<a href='http://www.shopcartbd.cf/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email
 </a>
 ";
