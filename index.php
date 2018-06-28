@@ -1,10 +1,3 @@
- <!-- 
-     All work done by Mahbubur Rahman and Mysha Rahman
-     North South University
-     For cse482
- -->
-
-
 <?php
 session_start();
 
@@ -78,7 +71,7 @@ else
                         <!--menu starts-->
 
                         <li>
-                        <?php
+                            <?php
                             if(!isset($_SESSION['customer_email'])){
                                 echo "<a href='customer_register.php'>Register</a>";
                             }
@@ -87,7 +80,7 @@ else
                                 echo "<a href='cart.php'>Shopping Cart</a>";
                             }
                             ?>
-                        
+
                         </li>
                         <li>
                             <?php
@@ -180,18 +173,18 @@ else
                             <a href="customer/my_account.php"> My Account </a>
                         </li>
                         <li>
-                          
 
-                          <?php
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        
+
 
                     </ul>
 
