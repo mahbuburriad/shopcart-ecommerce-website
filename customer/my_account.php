@@ -27,7 +27,7 @@ include("../functions/functions.php");
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="images/logo-small.PNG">
 
-        <title>ShopCart ! E-Commerce Store</title>
+        <title>ShopCart ! My Account</title>
 
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 700, 300, 100" rel="stylesheet">
@@ -56,9 +56,10 @@ include("../functions/functions.php");
                         <a href="#" class="btn btn-primary btn-sm">
 
                             <?php
+                        $ip = getRealUserIp();
     
     if(!isset($_SESSION['customer_email'])){
-        echo "Welcome:Guest";
+        echo 'Welcome: '.$ip ;
     }
 else
 {
@@ -326,7 +327,7 @@ $message = "
 <h2>
 Email Confirmation By Shopcart $c_name
 </h2>
-<a href='localhost/shopcart/customer/my_account.php?$customer_confirm_code'>
+<a href='http://www.shopcart.cf/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email
 </a>
 ";
@@ -374,6 +375,12 @@ echo "<script>window.open('my_account.php?my_orders','_self')</script>";
     if(isset($_GET['chat'])){
                        
                        include("chat/chat.php");
+                       
+                   }
+    
+      if(isset($_GET['profile'])){
+                       
+                       include("profile.php");
                        
                    }
                    

@@ -5,11 +5,6 @@ include("includes/connection.php");
 include("functions/functions.php");
 ?>
 
-<!-- 
-     All work done by Mahbubur Rahman and Mysha Rahman
-     North South University
-     For cse482
- -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +41,10 @@ include("functions/functions.php");
                     <a href="#" class="btn btn-primary btn-sm">
 
                         <?php
+                        $ip = getRealUserIp();
     
     if(!isset($_SESSION['customer_email'])){
-        echo "Welcome:Guest";
+        echo 'Welcome: '.$ip ;
     }
 else
 {

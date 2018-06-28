@@ -42,9 +42,10 @@ include("functions/functions.php")
                     <!-- col-md-6 login-details starts-->
                     <a href="#" class="btn btn-primary btn-sm">
                         <?php
+                        $ip = getRealUserIp();
     
     if(!isset($_SESSION['customer_email'])){
-        echo "Welcome:Guest";
+        echo 'Welcome: '.$ip ;
     }
 else
 {

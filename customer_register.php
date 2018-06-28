@@ -42,9 +42,10 @@ include("functions/functions.php");
                     <!-- col-md-6 login-details starts-->
                     <a href="#" class="btn btn-primary btn-sm">
                         <?php
+                        $ip = getRealUserIp();
     
     if(!isset($_SESSION['customer_email'])){
-        echo "Welcome:Guest";
+        echo 'Welcome: '.$ip ;
     }
 else
 {
@@ -324,6 +325,8 @@ else
  $json  = file_get_contents("https://freegeoip.net/json/$ipn");
  $json  =  json_decode($json ,true);
  $countryip =  $json['country_name'];
+$regionss= $json['region_name'];
+ $cityss = $json['city'];
       ?>
 
                             <div class="form-group">
@@ -333,8 +336,8 @@ else
                             </div>
 
                             <div class="form-group">
-                                <label for="">city</label>
-                                <input type="text" class="form-control" name="c_city" required>
+                                <label for="">City</label>
+                                <input type="text" class="form-control" name="c_city" value="<?php echo $cityss; ?>" required>
 
                             </div>
 
@@ -467,6 +470,8 @@ Information That save in our database
   </tr>
   
 </table>
+<br>
+<br>
 
 <a style='background-color: #af0c42; text-decoration: none; padding: 10px; font-size: 130%; color: white; margin-top:20px;' href='http://blazing.cf/shopcart/shopcart/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email

@@ -13,8 +13,3 @@ $run_qty = mysqli_query($con,$change_qty);
 }
 ?>
 
- <!-- 
-     All work done by Mahbubur Rahman and Mysha Rahman
-     North South University
-     For cse482
- -->

@@ -36,9 +36,10 @@ include("functions/functions.php");
                 <div class="col-md-6 login-details">
                     <a href="#" class="btn btn-primary btn-sm">
                         <?php
+                        $ip = getRealUserIp();
     
     if(!isset($_SESSION['customer_email'])){
-        echo "Welcome:Guest";
+        echo 'Welcome: '.$ip ;
     }
 else
 {
@@ -65,7 +66,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='cart.php'>Shopping Cart</a>";
+                                echo "<a href='customer/my_account.php'>Profile</a>";
                             }
                             ?>
 

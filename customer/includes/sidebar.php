@@ -10,7 +10,10 @@
         $row_customer = mysqli_fetch_array($run_customer);
         $customer_image = $row_customer['customer_image'];
         $customer_name = $row_customer['customer_name'];
-        
+        $customer_email = $row_customer['customer_email'];
+        $customer_country = $row_customer['customer_country'];
+        $customer_city = $row_customer['customer_city'];
+        $customer_contact = $row_customer['customer_contact'];
         if(!isset($_SESSION['customer_email'])){
             
             
@@ -36,6 +39,9 @@
         <ul class="nav nav-pills nav-stacked">
             <li class="<?php if(isset($_GET['my_orders'])) {echo " active "; } ?>">
                 <a href="my_account.php?my_orders"><i class="fas fa-cart-plus"></i> My Order List</a>
+            </li>
+            <li class="<?php if(isset($_GET['profile'])) {echo " active "; } ?>">
+                <a href="my_account.php?profile"><i class="fas fa-user-edit"></i> Profile</a>
             </li>
 
 
