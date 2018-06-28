@@ -64,7 +64,7 @@ else
                         <!--menu starts-->
 
                         <li>
-                        <?php
+                            <?php
                             if(!isset($_SESSION['customer_email'])){
                                 echo "<a href='customer_register.php'>Register</a>";
                             }
@@ -73,7 +73,7 @@ else
                                 echo "<a href='cart.php'>Shopping Cart</a>";
                             }
                             ?>
-                        
+
                         </li>
                         <li>
                             <?php
@@ -164,20 +164,20 @@ else
                         <li>
                             <a href="customer/my_account.php"> My Account </a>
                         </li>
-                      
-                        <li>
-                          
 
-                          <?php
+                        <li>
+
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        
+
 
                     </ul>
 
@@ -288,6 +288,8 @@ else
                     <div class="box-header">
 
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1OfAEyqbha2nHgGKYr8c9l2w7KS3vmdHYdDuZjrp9wBJ47w/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

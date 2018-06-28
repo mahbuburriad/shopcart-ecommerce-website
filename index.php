@@ -19,7 +19,7 @@ include("functions/functions.php");
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/logo-small.PNG">
 
-    <title>ShopCart ! E-Commerce Store</title>
+    <title>ShopCart | E-Commerce Store</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 700, 300, 100" rel="stylesheet">
