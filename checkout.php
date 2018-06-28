@@ -5,11 +5,7 @@ include("includes/connection.php");
 
 include("functions/functions.php")
 ?>
- <!-- 
-     All work done by Mahbubur Rahman and Mysha Rahman
-     North South University
-     For cse482
- -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +14,7 @@ include("functions/functions.php")
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/logo-small.PNG">
 
-    <title>ShopCart ! E-Commerce Store</title>
+    <title>ShopCart ! Checkout</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 700, 300, 100" rel="stylesheet">
@@ -71,7 +67,7 @@ else
                         <!--menu starts-->
 
                         <li>
-                        <?php
+                            <?php
                             if(!isset($_SESSION['customer_email'])){
                                 echo "<a href='customer_register.php'>Register</a>";
                             }
@@ -80,7 +76,7 @@ else
                                 echo "<a href='cart.php'>Shopping Cart</a>";
                             }
                             ?>
-                        
+
                         </li>
                         <li>
                             <?php
@@ -171,22 +167,22 @@ else
                         <li>
                             <a href="customer/my_account.php"> My Account </a>
                         </li>
-                       
-                        <li>
-                          
 
-                          <?php
+                        <li>
+
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
 
 
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        
+
 
                     </ul>
 

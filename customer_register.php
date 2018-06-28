@@ -14,7 +14,7 @@ include("functions/functions.php");
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/logo-small.PNG">
 
-    <title>ShopCart ! E-Commerce Store</title>
+    <title>ShopCart ! Register</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 700, 300, 100" rel="stylesheet">
@@ -67,7 +67,7 @@ else
                         <!--menu starts-->
 
                         <li>
-                        <?php
+                            <?php
                             if(!isset($_SESSION['customer_email'])){
                                 echo "<a href='customer_register.php'>Register</a>";
                             }
@@ -76,7 +76,7 @@ else
                                 echo "<a href='cart.php'>Shopping Cart</a>";
                             }
                             ?>
-                        
+
                         </li>
                         <li>
                             <?php
@@ -167,21 +167,21 @@ else
                         <li>
                             <a href="customer/my_account.php"> My Account </a>
                         </li>
-                        
+
 
                         <li>
-                          
 
-                          <?php
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        
+
 
                     </ul>
 
@@ -326,46 +326,46 @@ else
  $countryip =  $json['country_name'];
       ?>
 
-                        <div class="form-group">
-                            <label for="">Country</label>
-                            <input type="text" class="form-control" name="c_country" value="<?php echo $countryip;?>" required>
+                            <div class="form-group">
+                                <label for="">Country</label>
+                                <input type="text" class="form-control" name="c_country" value="<?php echo $countryip;?>" required>
 
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="">city</label>
-                            <input type="text" class="form-control" name="c_city" required>
+                            <div class="form-group">
+                                <label for="">city</label>
+                                <input type="text" class="form-control" name="c_city" required>
 
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="">Contact No</label>
-                            <input type="text" class="form-control" name="c_contact" required>
+                            <div class="form-group">
+                                <label for="">Contact No</label>
+                                <input type="text" class="form-control" name="c_contact" required>
 
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="">Address</label>
-                            <input type="text" class="form-control" name="c_address" required>
+                            <div class="form-group">
+                                <label for="">Address</label>
+                                <input type="text" class="form-control" name="c_address" required>
 
-                        </div>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="">Image</label>
-                            <input type="file" class="form-control" name="c_image" required>
+                            <div class="form-group">
+                                <label for="">Image</label>
+                                <input type="file" class="form-control" name="c_image" required>
 
-                        </div>
+                            </div>
 
 
 
-                        <div class="text-center">
-                            <button type="submit" name="register" class="btn btn-primary">
+                            <div class="text-center">
+                                <button type="submit" name="register" class="btn btn-primary">
                              <i class="fas fa-user-plus"></i> Register Now
                              
                          </button>
 
 
-                        </div>
+                            </div>
 
                     </form>
 
