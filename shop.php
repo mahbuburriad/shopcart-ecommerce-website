@@ -12,7 +12,7 @@ include("functions/functions.php");
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images/logo-small.PNG">
 
-    <title>ShopCart ! E-Commerce Store</title>
+    <title>ShopCart ! Shop</title>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400, 500, 700, 300, 100" rel="stylesheet">
@@ -59,7 +59,7 @@ else
 
 
                         <li>
-                        <?php
+                            <?php
                             if(!isset($_SESSION['customer_email'])){
                                 echo "<a href='customer_register.php'>Register</a>";
                             }
@@ -68,7 +68,7 @@ else
                                 echo "<a href='cart.php'>Shopping Cart</a>";
                             }
                             ?>
-                        
+
                         </li>
                         <li>
                             <?php
@@ -164,18 +164,18 @@ else
                         </li>
 
                         <li>
-                          
 
-                          <?php
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
-                        
+
 
                     </ul>
 
