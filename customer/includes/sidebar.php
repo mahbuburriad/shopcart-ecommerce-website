@@ -47,6 +47,9 @@
             <li class="<?php if(isset($_GET['pay_offline'])) {echo " active "; } ?>">
                 <a href="my_account.php?pay_offline"><i class="fab fa-cc-amazon-pay"></i> Pay Offline</a>
             </li>
+            <li class="<?php if(isset($_GET['chat'])) {echo " active "; } ?>">
+                <a href="my_account.php?chat"><i class="fas fa-trash"></i> Chat</a>
+            </li>
 
             <li class="<?php if(isset($_GET['change_pass'])) {echo " active "; } ?>">
                 <a href="my_account.php?change_pass"><i class="fas fa-unlock-alt"></i> Change Password</a>

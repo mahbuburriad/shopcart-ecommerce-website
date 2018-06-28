@@ -78,7 +78,18 @@ else
                         <ul class="menu">
                             <!--menu starts-->
 
-                            <li><a href="../customer_register.php">Registers</a></li>
+                            <li>
+
+                                <?php
+                            if(!isset($_SESSION['customer_email'])){
+                                echo "<a href='customer_register.php'>Register</a>";
+                            }
+                            else
+                            {
+                                echo "<a href='cart.php'>Shopping Cart</a>";
+                            }
+                            ?>
+                            </li>
                             <li>
                                 <?php
                             if(!isset($_SESSION['customer_email'])){
@@ -86,7 +97,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='customer/my_account.php?my_orders'>CheckOut</a>";
+                                echo "<a href='my_account.php?my_orders'>CheckOut</a>";
                             }
                             ?></li>
                             <li><a href="../cart.php">Go to Cart</a></li>
@@ -293,10 +304,10 @@ else
                 <div class="col-md-9">
 
                     <div class="box">
-                        
-          
-                        
-                        
+
+
+
+
 
                         <?php
     
@@ -357,6 +368,12 @@ echo "<script>window.open('my_account.php?my_orders','_self')</script>";
                     if(isset($_GET['delete_account'])){
                        
                        include("delete_account.php");
+                       
+                   }
+    
+    if(isset($_GET['chat'])){
+                       
+                       include("chat/chat.php");
                        
                    }
                    
