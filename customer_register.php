@@ -343,6 +343,7 @@ $regionss= $json['region_name'];
                                 </div>
 
                             </div>
+                            <p id="text"></p>
 
 
                             <div class="form-group">
@@ -386,7 +387,7 @@ $regionss= $json['region_name'];
                             <div class="form-group">
                                 <div class="col-md-6">
                                     <label for="">Zip Code</label>
-                                    <input type="text" class="form-control" value="<?php echo $zip_code; ?>" name="c_zipcode" required placeholder="Enter Your Zipcode">
+                                    <input type="text" class="form-control" value="<?php echo $zip_codes; ?>" name="c_zipcode" required placeholder="Enter Your Zipcode">
                                 </div>
 
                                 <div class="col-md-6">
@@ -402,10 +403,8 @@ $regionss= $json['region_name'];
                             <br>
                             <br>
 
-
-
                             <div class="text-center">
-                                <button type="submit" name="register" class="btn btn-primary">
+                                <button id="submit" type="submit" name="register" class="btn btn-primary">
                              <i class="fas fa-user-plus"></i> Sign Up
                              
                          </button>
@@ -467,25 +466,43 @@ Information That save in our database
 <table style='border:2px solid black;'>
   <tr>
     <th>Name</th>
-    <th>E-mail</th> 
-    <th>Pass</th>
-    <th>Country</th>
-    <th>City</th>
-    <th>Contact</th>
-    <th>Address</th>
-    
-  </tr>
-  <tr>
     <td>$c_name</td>
+    </tr>
+    <tr>
+    <th>E-mail</th> 
     <td>$c_email</td> 
-    <td>$c_pass</td> 
+    </tr>
+    <tr>
+    <th>Pass</th>
+     <td>$c_pass</td> 
+    </tr>
+    <tr>
+    <th>Country</th>
     <td>$c_country</td>
+    </tr>
+    <tr>
+    <th>City</th>
     <td>$c_city</td>
+    </tr>
+    <tr>
+    <th>Contact</th>
     <td>$c_contact</td>
+    </tr>
+    <tr>
+    <th>Zipcode</th>
+    <td>$c_zipcode</td>
+    </tr>
+    <tr>
+    <th>Gender</th>
+    <td>$c_gender</td>
+    </tr>
+    <tr>
+    <th>Address</th>
     <td>$c_address</td>
- 
-  </tr>
-  
+    </tr>
+    </tr>
+    
+
 </table>
 <br>
 <br>
