@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 22, 2018 at 09:34 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Host: localhost
+-- Generation Time: Jun 29, 2018 at 05:03 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -68,6 +68,7 @@ CREATE TABLE `cart` (
 
 INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
 (6, '::1', 1, 1500, 'Small'),
+(7, '127.0.0.1', 1, 2000, 'Small'),
 (9, '::1', 1, 5500, 'Small');
 
 -- --------------------------------------------------------
@@ -115,7 +116,6 @@ CREATE TABLE `coupons` (
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
 (4, 7, 'Gold', '400', 'riadx ', 100, 16),
-(5, 9, 'eid', '5400', 'eid2018', 1, 1),
 (6, 3, 'Bonus', '950', 'Bonus', 6, 0);
 
 -- --------------------------------------------------------
@@ -132,6 +132,8 @@ CREATE TABLE `customers` (
   `customer_country` text NOT NULL,
   `customer_city` text NOT NULL,
   `customer_contact` varchar(255) NOT NULL,
+  `customer_gender` varchar(100) NOT NULL,
+  `customer_zipcode` varchar(100) NOT NULL,
   `customer_address` text NOT NULL,
   `customer_image` text NOT NULL,
   `customer_ip` varchar(255) NOT NULL,
@@ -142,11 +144,13 @@ CREATE TABLE `customers` (
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
-(1, 'Mahbubur Riad', 'demo@gmail.com', '123456', 'Bangladesh', 'Dhaka', '01711574805', 'Nikunja 2, Dhaka, Bangladesh', '28279338_1826096224114456_3886215294656287949_n.jpg', '127.0.0.1', ''),
-(3, 'Mysha', 'mysha@gmail.com', '123456', 'Bangladesh', 'Dhaka', '34567890-', 'tfygiuhf adfasdf ', 'product-image (7).png', '::1', '145677'),
-(4, 'Mahbubur Rahman', 'mahbubur.riad@outlook.com', '123456', 'Bangladesh', 'Dhaka', '234567890', 'jjj adfasdf', '2.jpg', '::1', ''),
-(5, 'mysha rahman', 'mysha.rahman@northsouth.edu', '123456', 'bangladesh', 'dhaka', '018383838838', 'dhanmondi', '2017-09-02-18-33-21-409.jpg', '::1', '');
+INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_gender`, `customer_zipcode`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
+(1, 'Mahbubur Riad', 'demo@gmail.com', '123456', 'Bangladesh', 'Dhaka', '01711574805', 'Male', '122', 'Nikunja 2, Dhaka, Bangladesh', '28279338_1826096224114456_3886215294656287949_n.jpg', '127.0.0.1', ''),
+(5, 'mysha rahman', 'mysha.rahman@northsouth.edu', '123456', 'bangladesh', 'dhaka', '018383838838', 'Female', '122', 'dhanmondi', '2017-09-02-18-33-21-409.jpg', '::1', ''),
+(7, 'Mahb', 'mahbu@gmail.com', '123456', 'Banglade', 'Dhaka', '4555455', 'adsfasdf', '122', 'asdfasdfsdf', '28423097_1820726747984737_1037630539335686812_o.jpg', '127.0.0.1', ''),
+(8, 'asdf', 'sss@gmail.com', '123456', 'adsf', 'adsf', '544564', 'adsf', '122', 'asdf', 'product-image (7).png', '127.0.0.1', ''),
+(9, 'adsf', 'sssss@gmail.com', '123456', 'Bangladesh', 'Dhaka', '01711574805', 'Male', '12596', 'adasfdasfad', '91JNpVHnrtL._UX395_.jpg', '127.0.0.1', '1185031797'),
+(10, 'asdf', 'assdsf@gmail.com', '123456', 'adsf', 'adsf', '544', 'ad', '12', 'adsf', 'product-image (22).jpg', '127.0.0.1', '867460733');
 
 -- --------------------------------------------------------
 
@@ -190,7 +194,8 @@ INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice
 (18, 1, 5163, 1311328606, 5, 'Small', '2018-06-18 18:45:43', 'pending'),
 (19, 5, 16385, 1599844595, 4, 'Medium', '2018-06-22 18:32:26', 'Complete'),
 (20, 5, 1252, 1599844595, 3, 'Small', '2018-06-22 18:36:34', 'Complete'),
-(21, 5, 5572, 1283089109, 1, 'Small', '2018-06-22 18:48:12', 'pending');
+(21, 5, 5572, 1283089109, 1, 'Small', '2018-06-22 18:48:12', 'pending'),
+(22, 8, 2095, 609195684, 1, 'Small', '2018-06-29 01:41:42', 'pending');
 
 -- --------------------------------------------------------
 
@@ -288,7 +293,8 @@ INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_
 (18, 1, 1311328606, '3', 5, 'Small', 'pending'),
 (19, 5, 1599844595, '5', 4, 'Medium', 'Complete'),
 (20, 5, 1599844595, '7', 3, 'Small', 'Complete'),
-(21, 5, 1283089109, '9', 1, 'Small', 'pending');
+(21, 5, 1283089109, '9', 1, 'Small', 'pending'),
+(22, 8, 609195684, '7', 1, 'Small', 'pending');
 
 -- --------------------------------------------------------
 
@@ -318,9 +324,7 @@ INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `date`, `product_tit
 (3, 5, 3, '2018-06-08 08:43:02', 'Casio Fantastic Kids Watch', 'kids watch (1).jpg', 'kids watch (1).png', 'kids watch (2).jpg', 1000, '<p>Here is kids wafhtfxdbfjghcjghfgjfhogj fhgjhfjghdjfhjhgjfhgjhgjdhfjghjdrtgruighjjjjjj</p>', 'Casio'),
 (4, 2, 2, '2018-06-08 17:09:16', 'skirt', 'product-image (6).png', 'product-image (8).jpg', 'product-image (9).jpg', 2000, '<p>100% soft cotton, summer wear, print, single colour&nbsp; size can be modified.</p>', 'Celabration'),
 (5, 5, 1, '2018-06-08 17:14:54', 'Watch Titan formal wears for Gents', 'product-image (6).jpg', 'product-image (7).png', 'product-image (22).jpg', 4000, '<p>original ,waterproof and full guranted.</p>', 'Titan'),
-(6, 7, 2, '2018-06-08 17:17:02', 'Original Cosmetic for Ladies', 'product-image (2).jxr', 'product-image (17).jpg', 'product-image (27).jpg', 1500, '<p>Guranteed original quality .</p>', 'cosmetic'),
-(7, 3, 2, '2018-06-08 17:20:01', 'Palazo for Ladies', 'product-image (14).jpg', 'product-image (24).jpg', 'product-image (21).jpg', 2000, '<p>Silk, cotton summer wear.</p>', 'palazzo'),
-(9, 4, 2, '2018-06-08 17:35:48', 'Gold plated Ring', '91JNpVHnrtL._UX395_.jpg', '71+Dnf3TiiL._UL1500_.jpg', 'product-img (14).jpg', 5500, '<p>100% Gold plated . Washable colour gurantee for lifetime.</p>', 'APON');
+(7, 3, 2, '2018-06-08 17:20:01', 'Palazo for Ladies', 'product-image (14).jpg', 'product-image (24).jpg', 'product-image (21).jpg', 2000, '<p>Silk, cotton summer wear.</p>', 'palazzo');
 
 -- --------------------------------------------------------
 
@@ -470,13 +474,13 @@ ALTER TABLE `coupons`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `manufacturers`
@@ -494,7 +498,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `products`
