@@ -332,7 +332,7 @@ $message = "
 <h2>
 Email Confirmation By Shopcart $c_name
 </h2>
-<a href='http://www.shopcartbd.cf/customer/my_account.php?$customer_confirm_code'>
+<a href='http://shopcartbd.cf/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email
 </a>
 ";
