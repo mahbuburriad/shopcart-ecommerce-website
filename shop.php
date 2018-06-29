@@ -66,7 +66,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='customer/my_account.php'>Profile</a>";
+                                echo "<a href='customer/my_account.php?profile'>Profile</a>";
                             }
                             ?>
 
@@ -158,11 +158,9 @@ else
                         </li>
 
                         <li>
-                            <a href="customer/my_account.php"> My Account </a>
+                            <a href="customer/my_account.php?profile"> My Account </a>
                         </li>
-                        <li>
-                            <a href="cart.php"> Shopping Cart </a>
-                        </li>
+
 
                         <li>
 
@@ -252,6 +250,26 @@ else
                     <li>Shop</li>
 
                 </ul>
+
+            </div>
+            <div class="col-md-12">
+                <?php
+    $c_email = $_SESSION['customer_email'];
+    $get_customer = "SELECT * FROM customers WHERE  customer_email = '$c_email'";
+    $run_customer = mysqli_query($con, $get_customer);
+    $row_customer = mysqli_fetch_array($run_customer);
+    $customer_confirm_code = $row_customer['customer_confirm_code'];
+    if(!empty($customer_confirm_code)){
+    
+    ?>
+
+                    <div class="alert alert-danger">
+                        <strong>Warning! </strong> Please Confirm Through Your Email. If you have not recieved your confirmation email
+                        <a href="my_account.php?send_email" class="alert-link">Send E-mail Again</a>
+
+                    </div>
+                    <?php } ?>
+
 
             </div>
 

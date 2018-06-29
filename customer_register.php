@@ -74,7 +74,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='cart.php'>Shopping Cart</a>";
+                                echo "<a href='customer/my_account.php?profile'>Profile</a>";
                             }
                             ?>
 
@@ -303,20 +303,17 @@ else
                     <form method="post" action="customer_register.php" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <label for="">Full Name</label>
-                            <input type="text" class="form-control" name="c_name" required>
+                            <div class="col-md-6">
+                                <label for="">Full Name</label>
 
-                        </div>
+                                <input type="text" class="form-control" name="c_name" required placeholder="Enter Your Name">
 
-                        <div class="form-group">
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" name="c_email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control" name="c_email" required placeholder="Enter Your Email">
 
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Password</label>
-                            <input type="password" class="form-control" name="c_pass" required>
+                            </div>
 
                         </div>
                         <?php
@@ -329,33 +326,69 @@ $regionss= $json['region_name'];
  $cityss = $json['city'];
       ?>
 
+
+
                             <div class="form-group">
-                                <label for="">Country</label>
-                                <input type="text" class="form-control" name="c_country" value="<?php echo $countryip;?>" required>
+                                <div class="col-md-6">
+
+                                    <label for="">Password</label>
+                                    <input type="password" class="form-control" name="c_pass" required placeholder="Enter Password">
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="">Confirm Password</label>
+                                    <input type="password" class="form-control" name="conf_pass" required placeholder="Enter Password Again">
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label for="">Country</label>
+                                    <input type="text" class="form-control" name="c_country" value="<?php echo $countryip;?>" required placeholder="Enter Your County">
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="">City</label>
+                                    <input type="text" class="form-control" name="c_city" value="<?php echo $cityss; ?>" required placeholder="Enter Your City">
+                                </div>
 
                             </div>
 
                             <div class="form-group">
-                                <label for="">City</label>
-                                <input type="text" class="form-control" name="c_city" value="<?php echo $cityss; ?>" required>
+                                <div class="col-md-6">
+                                    <label for="">Enter Mobile No</label>
+                                    <input type="text" class="form-control" name="c_contact" required placeholder="Enter Mobile No">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="">Gender</label>
+                                    <input type="text" class="form-control" name="c_gender" required placeholder="Enter Your Gender">
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for="">Address</label>
+                                    <input type="text" class="form-control" name="c_address" required placeholder="Enter Your Address">
+
+                                </div>
+
 
                             </div>
 
                             <div class="form-group">
-                                <label for="">Contact No</label>
-                                <input type="text" class="form-control" name="c_contact" required>
+                                <div class="col-md-12">
+                                    <label for="">Image</label>
+                                    <input type="file" class="form-control" name="c_image" required>
 
-                            </div>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="">Address</label>
-                                <input type="text" class="form-control" name="c_address" required>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">Image</label>
-                                <input type="file" class="form-control" name="c_image" required>
 
                             </div>
 
@@ -363,7 +396,7 @@ $regionss= $json['region_name'];
 
                             <div class="text-center">
                                 <button type="submit" name="register" class="btn btn-primary">
-                             <i class="fas fa-user-plus"></i> Register Now
+                             <i class="fas fa-user-plus"></i> Sign Up
                              
                          </button>
 
@@ -417,7 +450,7 @@ $regionss= $json['region_name'];
 
 <?php
 
- if(isset($_POST['register'])){ $c_name = $_POST['c_name']; $c_email = $_POST['c_email']; $c_pass = $_POST['c_pass']; $c_country = $_POST['c_country']; $c_city = $_POST['c_city']; $c_contact = $_POST['c_contact']; $c_address = $_POST['c_address']; $c_image = $_FILES['c_image']['name']; $c_image_tmp =$_FILES['c_image']['tmp_name'];
+ if(isset($_POST['register'])){ $c_name = $_POST['c_name']; $c_email = $_POST['c_email']; $c_pass = $_POST['c_pass']; $c_country = $_POST['c_country']; $c_city = $_POST['c_city']; $c_contact = $_POST['c_contact']; $c_gender = $_POST['c_gender']; $c_address = $_POST['c_address']; $c_image = $_FILES['c_image']['name']; $c_image_tmp =$_FILES['c_image']['tmp_name'];
 
         $c_ip = getRealUserIp(); 
 
@@ -482,7 +515,7 @@ $headers .= "Content-type: text/html\r\n";
 mail($c_email,$subject,$message,$headers);
                                
 
-        $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image,customer_ip, customer_confirm_code) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_ip', '$customer_confirm_code')";
+        $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_gender,customer_address,customer_image,customer_ip, customer_confirm_code) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact', '$c_gender','$c_address','$c_image','$c_ip', '$customer_confirm_code')";
 
 
                 $run_customer = mysqli_query($con,$insert_customer);
@@ -498,7 +531,7 @@ mail($c_email,$subject,$message,$headers);
 
                 $_SESSION['customer_email']=$c_email;
                 echo "<script>alert('You have been Registered Successfully')</script>";
-                echo "<script>window.open('index.php','_self')</script>";
+                echo "<script>window.open('customer/my_account.php?profile','_self')</script>";
 
 
         }

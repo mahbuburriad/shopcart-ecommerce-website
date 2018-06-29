@@ -72,7 +72,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='cart.php'>Shopping Cart</a>";
+                                echo "<a href='customer/my_account.php?profile'>Profile</a>";
                             }
                             ?>
 
