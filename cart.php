@@ -359,7 +359,6 @@ else
                                                 while($row_products = mysqli_fetch_array($run_products)){
                                                     $product_title = $row_products['product_title'];
                                                     $product_img1 = $row_products['product_img1'];
-                                                    #$only_price = $row_products['product_price'];
                                                     $sub_total = $only_price*$pro_qty;
                                                     $_SESSION['pro_qty'] = $pro_qty;
                                                     $total += $sub_total;
@@ -431,6 +430,7 @@ else
                                         <tr>
                                             <th colspan="5"> Total </th>
                                             <th colspan="2">
+
                                                 <?php echo $total; ?> BDT</th>
 
 
@@ -666,7 +666,11 @@ else
 
                                     <td>Tax(2.25%)</td>
                                     <th>
-                                        <?php echo $tax; ?>
+                                        <?php
+                                       if(empty($only_price)){
+                                               echo "0.00";
+                                               }
+                                               else{ echo "$tax"; } ?>
                                     </th>
 
 
@@ -676,7 +680,13 @@ else
 
                                     <td>Total</td>
                                     <th>
-                                        <?php echo $total_charge; ?>
+
+                                        <?php
+                                       if(empty($only_price)){
+                                               echo "0.00";
+                                               }
+                                               else{ echo "$total_charge"; } ?>
+
                                     </th>
 
                                 </tr>

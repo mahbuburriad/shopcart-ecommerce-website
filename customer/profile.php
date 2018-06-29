@@ -48,6 +48,20 @@
                 </tr>
 
                 <tr>
+                    <th><i class="fas fa-university"></i> Gender</th>
+                    <td>
+                        <?php echo $customer_gender; ?>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><i class="fas fa-university"></i> Zipcode</th>
+                    <td>
+                        <?php echo $customer_zipcode; ?>
+                    </td>
+                </tr>
+
+                <tr>
                     <th><i class="fas fa-phone"></i> Cell No</th>
                     <td>
                         <a href="tel:<?php echo $customer_contact; ?>">

@@ -324,6 +324,7 @@ else
  $countryip =  $json['country_name'];
 $regionss= $json['region_name'];
  $cityss = $json['city'];
+ $zip_codes = $json['zip_code'];
       ?>
 
 
@@ -383,14 +384,23 @@ $regionss= $json['region_name'];
                             </div>
 
                             <div class="form-group">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <label for="">Zip Code</label>
+                                    <input type="text" class="form-control" value="<?php echo $zip_code; ?>" name="c_zipcode" required placeholder="Enter Your Zipcode">
+                                </div>
+
+                                <div class="col-md-6">
                                     <label for="">Image</label>
                                     <input type="file" class="form-control" name="c_image" required>
 
                                 </div>
 
 
+
                             </div>
+                            <br>
+                            <br>
+                            <br>
 
 
 
@@ -399,30 +409,10 @@ $regionss= $json['region_name'];
                              <i class="fas fa-user-plus"></i> Sign Up
                              
                          </button>
-
-
                             </div>
-
                     </form>
-
-
-
                 </div>
-
-
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
 
         </div>
     </div>
@@ -434,12 +424,6 @@ $regionss= $json['region_name'];
     include("includes/footer.php");
     
     ?>
-
-
-
-
-
-
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.min.js"></script>
 
@@ -450,7 +434,7 @@ $regionss= $json['region_name'];
 
 <?php
 
- if(isset($_POST['register'])){ $c_name = $_POST['c_name']; $c_email = $_POST['c_email']; $c_pass = $_POST['c_pass']; $c_country = $_POST['c_country']; $c_city = $_POST['c_city']; $c_contact = $_POST['c_contact']; $c_gender = $_POST['c_gender']; $c_address = $_POST['c_address']; $c_image = $_FILES['c_image']['name']; $c_image_tmp =$_FILES['c_image']['tmp_name'];
+ if(isset($_POST['register'])){ $c_name = $_POST['c_name']; $c_email = $_POST['c_email']; $c_pass = $_POST['c_pass']; $c_country = $_POST['c_country']; $c_city = $_POST['c_city']; $c_contact = $_POST['c_contact']; $c_gender = $_POST['c_gender']; $c_address = $_POST['c_address']; $c_zipcode = $_POST['c_zipcode']; $c_image = $_FILES['c_image']['name']; $c_image_tmp =$_FILES['c_image']['tmp_name'];
 
         $c_ip = getRealUserIp(); 
 
@@ -515,26 +499,25 @@ $headers .= "Content-type: text/html\r\n";
 mail($c_email,$subject,$message,$headers);
                                
 
-        $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_gender,customer_address,customer_image,customer_ip, customer_confirm_code) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact', '$c_gender','$c_address','$c_image','$c_ip', '$customer_confirm_code')";
+        $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_gender,customer_zipcode,customer_address,customer_image,customer_ip, customer_confirm_code) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact', '$c_gender','$c_zipcode','$c_address','$c_image','$c_ip', '$customer_confirm_code')";
 
 
                 $run_customer = mysqli_query($con,$insert_customer);
                 $sel_cart = "select * from cart where ip_add='$c_ip'";
                 $run_cart = mysqli_query($con,$sel_cart);
                 $check_cart = mysqli_num_rows($run_cart);
+
                 if($check_cart>0){
                 $_SESSION['customer_email']=$c_email;
                 echo "<script>alert('You have been Registered Successfully')</script>";
                 echo "<script>window.open('checkout.php','_self')</script>";
+                }
 
-                }else{
-
+                else{
                 $_SESSION['customer_email']=$c_email;
                 echo "<script>alert('You have been Registered Successfully')</script>";
                 echo "<script>window.open('customer/my_account.php?profile','_self')</script>";
-
-
-        }
+                }
 
 
 

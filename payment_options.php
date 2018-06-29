@@ -70,11 +70,7 @@
                     <?php } else{  ?>
                     <a href="#>">Pay Online By Paypal</a>
                     <?php } ?>
-
-
                     <img src="images/paypal.png" alt="Paypal" class="img-responsive" width="500" height="270">
-
-
             </p>
 
 
