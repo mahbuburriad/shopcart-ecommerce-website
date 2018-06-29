@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jun 29, 2018 at 05:03 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Host: 127.0.0.1
+-- Generation Time: Jun 29, 2018 at 11:53 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,7 +46,7 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`, `admin_country`, `admin_job`, `admin_about`) VALUES
 (5, 'Admin Demo', 'demo@gmail.com', '123456', 'Riad.jpg', '33456693', 'Bangladesh', 'Developer', '  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical  '),
-(9, 'Mysha Rahman', 'mysha.rahman@northsouth.edu', '123456', '2017-09-02-18-33-21-409.jpg', '01654545454545', 'Bangladesh', 'Web Developer', ' Web Developer of North South.');
+(9, 'Mysha Rahman', 'mysha.rahman@northsouth.edu', '123456', '2017-10-31-12-56-39-460.jpg', '01654545454545', 'Bangladesh', 'Web Developer', '           Web Developer of North South.          ');
 
 -- --------------------------------------------------------
 
@@ -67,9 +67,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
-(6, '::1', 1, 1500, 'Small'),
-(7, '127.0.0.1', 1, 2000, 'Small'),
-(9, '::1', 1, 5500, 'Small');
+(3, '::1', 2, 1000, 'Large'),
+(7, '::1', 5, 400, 'Medium');
 
 -- --------------------------------------------------------
 
@@ -91,7 +90,6 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_desc`) VALUES
 (1, 'Man', 'errgsdfg'),
 (2, 'Woman', 'sdfgsg'),
 (3, 'Kids', 'sfdgsdfg'),
-(6, 'hfad', 'sfgsdgf'),
 (7, 'Others', 'Everything extra....\r\n\r\n');
 
 -- --------------------------------------------------------
@@ -115,7 +113,7 @@ CREATE TABLE `coupons` (
 --
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
-(4, 7, 'Gold', '400', 'riadx ', 100, 16),
+(4, 7, 'Gold', '400', 'riadx ', 100, 18),
 (6, 3, 'Bonus', '950', 'Bonus', 6, 0);
 
 -- --------------------------------------------------------
@@ -324,7 +322,8 @@ INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `date`, `product_tit
 (3, 5, 3, '2018-06-08 08:43:02', 'Casio Fantastic Kids Watch', 'kids watch (1).jpg', 'kids watch (1).png', 'kids watch (2).jpg', 1000, '<p>Here is kids wafhtfxdbfjghcjghfgjfhogj fhgjhfjghdjfhjhgjfhgjhgjdhfjghjdrtgruighjjjjjj</p>', 'Casio'),
 (4, 2, 2, '2018-06-08 17:09:16', 'skirt', 'product-image (6).png', 'product-image (8).jpg', 'product-image (9).jpg', 2000, '<p>100% soft cotton, summer wear, print, single colour&nbsp; size can be modified.</p>', 'Celabration'),
 (5, 5, 1, '2018-06-08 17:14:54', 'Watch Titan formal wears for Gents', 'product-image (6).jpg', 'product-image (7).png', 'product-image (22).jpg', 4000, '<p>original ,waterproof and full guranted.</p>', 'Titan'),
-(7, 3, 2, '2018-06-08 17:20:01', 'Palazo for Ladies', 'product-image (14).jpg', 'product-image (24).jpg', 'product-image (21).jpg', 2000, '<p>Silk, cotton summer wear.</p>', 'palazzo');
+(7, 3, 2, '2018-06-08 17:20:01', 'Palazo for Ladies', 'product-image (14).jpg', 'product-image (24).jpg', 'product-image (21).jpg', 2000, '<p>Silk, cotton summer wear.</p>', 'palazzo'),
+(10, 12, 3, '2018-06-29 09:32:30', 'Sweater', 'kids-sweater-500x500.jpg', 'rBVaEVmgYL2AKx3ZAALImVNsVzE320.jpg', 'rBVaEFfOjZKAbtYDAAOgT-mtz5U345.jpg', 1500, '<p>Sweater of high cotton quality for winter. Soft cotton. Emboidery.</p>', 'sweater');
 
 -- --------------------------------------------------------
 
@@ -348,7 +347,8 @@ INSERT INTO `product_categories` (`p_cat_id`, `p_cat_title`, `p_cat_desc`) VALUE
 (5, 'Watch', 'vzxvzdcv'),
 (6, 'Bag', 'dfgxf'),
 (7, 'Makeup Kit', 'zxvzxcv'),
-(11, 'Apex Mavric', 'zxcvzxcv');
+(11, 'Apex Mavric', 'zxcvzxcv'),
+(12, 'Winter Clothes', 'Wearing for winter.\r\n');
 
 -- --------------------------------------------------------
 
@@ -504,13 +504,13 @@ ALTER TABLE `pending_orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `p_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `p_cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `slider`

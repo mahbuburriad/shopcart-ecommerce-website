@@ -195,6 +195,8 @@ $admin_country = $_POST['admin_country'];
 $admin_job = $_POST['admin_job'];
 $admin_contact = $_POST['admin_contact'];
 $admin_about = $_POST['admin_about'];
+
+    
 $admin_image = $_FILES['admin_image']['name'];
 $temp_admin_image = $_FILES['admin_image']['tmp_name'];
 move_uploaded_file($temp_admin_image,"admin_images/$admin_image");

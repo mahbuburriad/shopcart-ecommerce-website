@@ -312,4 +312,4 @@ echo "<script>window.open('index.php?view_products','_self')</script>";
 
 ?>
 
-            <?php } }?>
+           
