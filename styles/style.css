@@ -702,6 +702,16 @@ button:hover {
 
     font-family: 'Dancing Script', cursive !important;
     font-size: 200%;
+
+}
+
+.usersection th {
+    padding-right: 30px;
+    color: cadetblue;
+}
+
+.usersection img {
+    border-radius: 50%;
 }
 
 .isDisabled {

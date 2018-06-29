@@ -48,14 +48,14 @@
                 </tr>
 
                 <tr>
-                    <th><i class="fas fa-university"></i> Gender</th>
+                    <th><i class="fas fa-transgender"></i> Gender</th>
                     <td>
                         <?php echo $customer_gender; ?>
                     </td>
                 </tr>
 
                 <tr>
-                    <th><i class="fas fa-university"></i> Zipcode</th>
+                    <th><i class="fas fa-map-pin"></i> Zipcode</th>
                     <td>
                         <?php echo $customer_zipcode; ?>
                     </td>
@@ -85,6 +85,17 @@
 
         <div class="col-sm-4">
             <img src='customer_images/<?php echo $customer_image;?>' class='img-responsive'>
+            <center style="margin-top: 10px;">
+                <a href="my_account.php?edit_account">  <abbr title="Edit Account"><i class="fas fa-edit"></i></abbr> </a>
+                <a href="../shop.php"> <abbr title="Go to Shop"><i class="fas fa-shopping-basket"></i></abbr> </a>
+                <a href="my_account.php?delete_account"> <abbr title="Delete Account"><i class="fas fa-trash-alt"></i></abbr> </a>
+                <a href="my_account.php?change_pass"> <abbr title="Change Password"><i class="fas fa-key"></i></abbr> </a>
+
+
+
+            </center>
+
+
 
         </div>
 
