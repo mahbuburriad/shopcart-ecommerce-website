@@ -440,10 +440,11 @@ function total_price(){
     while($record = mysqli_fetch_array($run_cart)){
         $pro_id = $record['p_id'];
         $pro_qty = $record['qty'];
+        $p_price = $record['p_price'];
         $get_price = "SELECT * FROM products WHERE product_id='$pro_id'";
         $run_price = mysqli_query($db, $get_price);
         while($row_price=mysqli_fetch_array($run_price)){
-            $sub_total = $row_price['product_price']*$pro_qty;
+            $sub_total = $p_price*$pro_qty;
             $total += $sub_total;  
         }
         
