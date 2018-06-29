@@ -250,6 +250,13 @@ else
 
     <div class="col-md-12">
         <?php
+        
+        if(!isset($_SESSION['customer_email'])){
+        
+    }
+        else{
+            
+        
     $c_email = $_SESSION['customer_email'];
     $get_customer = "SELECT * FROM customers WHERE  customer_email = '$c_email'";
     $run_customer = mysqli_query($con, $get_customer);
@@ -268,7 +275,7 @@ else
 
 
             </div>
-            <?php } ?>
+            <?php } }?>
 
 
     </div>

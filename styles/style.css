@@ -703,3 +703,10 @@ button:hover {
     font-family: 'Dancing Script', cursive !important;
     font-size: 200%;
 }
+
+.isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}

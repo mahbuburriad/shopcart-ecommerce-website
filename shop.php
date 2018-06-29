@@ -254,6 +254,13 @@ else
             </div>
             <div class="col-md-12">
                 <?php
+        
+        if(!isset($_SESSION['customer_email'])){
+        
+    }
+        else{
+            
+        
     $c_email = $_SESSION['customer_email'];
     $get_customer = "SELECT * FROM customers WHERE  customer_email = '$c_email'";
     $run_customer = mysqli_query($con, $get_customer);
@@ -264,11 +271,15 @@ else
     ?>
 
                     <div class="alert alert-danger">
-                        <strong>Warning! </strong> Please Confirm Through Your Email. If you have not recieved your confirmation email
-                        <a href="my_account.php?send_email" class="alert-link">Send E-mail Again</a>
+                        <center>
+                            <strong>Warning! </strong> Please Confirm Through Your Email. If you have not recieved your confirmation email
+                            <a href="my_account.php?send_email" class="alert-link">Send E-mail Again</a>
+
+                        </center>
+
 
                     </div>
-                    <?php } ?>
+                    <?php } }?>
 
 
             </div>
