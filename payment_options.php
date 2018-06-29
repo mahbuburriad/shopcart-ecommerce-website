@@ -47,9 +47,14 @@
         </div>
 
         <p class="lead text-center">
+            <?php
+            
             if(!empty($customer_confirm_code)){
-            <a class="isDisabled" href="order.php?c_id=<?php echo $customer_id; ?>">Pay By Bkash / Offline</a> } else{
-            <a href="order.php?c_id=<?php echo $customer_id; ?>">Pay By Bkash / Offline</a> }
+                ?>
+                <a class="isDisabled">Pay By Bkash / Offline</a>
+                <?php } else{  ?>
+                <a href="order.php?c_id=<?php echo $customer_id; ?>">Pay By Bkash / Offline</a>
+                <?php  }?>
 
 
 
@@ -57,13 +62,17 @@
 
         <center>
             <p class="lead">
+                <?php
 
                 if(!empty($customer_confirm_code)){
-                <a class="isDisabled" href="#">Pay Online By Paypal</a> } else{
-                <a href="#">Pay Online By Paypal</a> }
+                ?>
+                    <a class="isDisabled">Pay Online By Paypal</a>
+                    <?php } else{  ?>
+                    <a href="#>">Pay Online By Paypal</a>
+                    <?php } ?>
 
 
-                <img src="images/paypal.png" alt="Paypal" class="img-responsive" width="500" height="270">
+                    <img src="images/paypal.png" alt="Paypal" class="img-responsive" width="500" height="270">
 
 
             </p>
