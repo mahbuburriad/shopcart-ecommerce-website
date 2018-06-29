@@ -21,7 +21,7 @@ body {
 
 #top .offer {
     color: #fff;
-    
+
 }
 
 #top .offer .btn {
@@ -509,7 +509,7 @@ a {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     border-radius: 10px;
-    
+
 
 }
 
@@ -686,13 +686,20 @@ li:hover {
 
 a {
     text-decoration: none !important;
-    
+
 }
 
-button:hover{
+button:hover {
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     font-size: 105%;
+}
+
+.usersection {
+
+
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 200%;
 }

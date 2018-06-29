@@ -36,6 +36,7 @@ include("../functions/functions.php");
         <link rel="stylesheet" type="text/css" href="../styles/style.css">
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
 
     </head>
@@ -178,17 +179,21 @@ else
                             </li>
 
                             <li class="active">
-                                <a href="my_account.php"> My Account </a>
+                                <a href="my_account.php?profile"> My Account </a>
                             </li>
                             <li>
-                                <a href="../cart.php"> Shopping Cart </a>
+
+
+                                <?php
+                          include("../additional_info.php");
+
+                          ?>
+
                             </li>
                             <li>
                                 <a href="../contact.php"> Contact Us</a>
                             </li>
-                            <li>
-                                <a href="../app/shopcart.apk">Site APP</a>
-                            </li>
+
 
                         </ul>
 

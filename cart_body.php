@@ -166,20 +166,21 @@ else
                         </li>
 
                         <li>
-                            <a href="customer/my_account.php"> My Account </a>
+                            <a href="customer/my_account.php?profile"> My Account </a>
                         </li>
+                        <li>
 
 
 
-                        <?php
+                            <?php
                           include("additional_info.php");
 
                           ?>
 
-                            </li>
-                            <li>
-                                <a href="contact.php"> Contact Us</a>
-                            </li>
+                        </li>
+                        <li>
+                            <a href="contact.php"> Contact Us</a>
+                        </li>
 
 
                     </ul>

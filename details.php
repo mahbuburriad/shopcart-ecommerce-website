@@ -192,7 +192,7 @@ else
                             </li>
 
                             <li>
-                                <a href="customer/my_account.php"> My Account </a>
+                                <a href="customer/my_account.php?profile"> My Account </a>
                             </li>
 
 

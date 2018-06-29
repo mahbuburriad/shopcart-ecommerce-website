@@ -13,6 +13,7 @@
         $customer_email = $row_customer['customer_email'];
         $customer_country = $row_customer['customer_country'];
         $customer_city = $row_customer['customer_city'];
+        $customer_address = $row_customer['customer_address'];
         $customer_contact = $row_customer['customer_contact'];
         if(!isset($_SESSION['customer_email'])){
             

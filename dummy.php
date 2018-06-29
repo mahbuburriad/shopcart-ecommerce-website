@@ -1,4 +1,4 @@
- <!-- 
+<!-- 
      All work done by Mahbubur Rahman and Mysha Rahman
      North South University
      For cse482
@@ -130,17 +130,17 @@ include("functions/functions.php");
                         <li>
                             <a href="checkout.php"> My Account </a>
                         </li>
-                       
+
 
                         <li>
-                          
 
-                          <?php
+
+                            <?php
                           include("additional_info.php");
 
                           ?>
-                         
-                      </li>
+
+                        </li>
                         <li>
                             <a href="contact.php"> Contact Us</a>
                         </li>
@@ -253,3 +253,73 @@ include("functions/functions.php");
 </body>
 
 </html>
+
+
+<div class="profilename">
+    <center>
+        <h1>
+            <?php echo $customer_name; ?>'s Profiles</h1>
+    </center>
+
+</div>
+
+<hr>
+
+<div class="usersection">
+
+    <div class="col-sm-4">
+        <img src="<?php echo $customer_image; ?>" alt="">
+
+    </div>
+
+    <div class="col-sm-8">
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>
+                    <?php echo $customer_name; ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th>E-mail</th>
+                <td>
+                    <?php echo $customer_email; ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Country</th>
+                <td>
+                    <?php echo $customer_country; ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <td>
+                    <?php echo $customer_city; ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th>contact</th>
+                <td>
+                    <?php echo $customer_contact; ?>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Address</th>
+                <td>
+                    <?php echo $customer_address; ?>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
