@@ -29,16 +29,16 @@ include("functions/functions.php");
 <body>
 
     <div id="top">
-        <!--top starts-->
+
 
         <div class="container">
-            <!--container starts-->
+
 
             <div class="row">
-                <!--row starts-->
+
 
                 <div class="col-md-6 login-details">
-                    <!-- col-md-6 login-details starts-->
+
                     <a href="#" class="btn btn-primary btn-sm">
                         <?php
                         $ip = getRealUserIp();
@@ -56,13 +56,12 @@ else
                     <a href="#">Shopping Cart Total Price: <?php total_price();?>/=, Total Items <?php items(); ?></a>
 
                 </div>
-                <!-- col-md-6 login-details ends-->
 
                 <div class="col-md-6">
-                    <!-- col-md-6  starts-->
+
 
                     <ul class="menu">
-                        <!--menu starts-->
+
 
                         <li>
                             <?php
@@ -90,25 +89,13 @@ else
                         <li>
                             <?php
                             if(!isset($_SESSION['customer_email'])){ echo "<a href='checkout.php'>Sign in</a>"; } else{ echo "<a href='logout.php'>Sign out</a>"; }
-                            
                             ?>
-
-
                         </li>
-
                     </ul>
-                    <!--menu ends-->
                 </div>
-                <!-- col-md-6 ends-->
             </div>
-            <!-- row ends-->
-
         </div>
-        <!--container ends-->
-
     </div>
-    <!--top ends-->
-
     <div class="navbar navbar-default" id="navbar">
 
         <div class="container">
@@ -392,13 +379,13 @@ else
                         $sender_email = $_POST['email'];
                         $sender_subject = $_POST['subject'];
                         $sender_message = $_POST['message'];
-                        $receiver_email = "mahbubur.riad@gmail.com";
+                        $receiver_email = "admin@shopcartbd.cf";
                         mail($receiver_email,$sender_name,$sender_subject,$sender_message,$sender_email);
                         
                         $email = $_POST['email'];
                         $subject = "Welcome to Shopcart";
                         $msg = "I shall get you soon, thanks for sending us email";
-                        $sendmail_from = "mahbubur.riad@gmail.com";
+                        $sendmail_from = "admin@shopcartbd.cf";
                         mail($email,$subject,$msg,$sendmail_from);
                         
                         echo "<h2 align='center'>Your Message has been sent successfully</h2>";
@@ -408,41 +395,20 @@ else
                     
                     ?>
 
-
-
                 </div>
 
-
-
-
-
             </div>
-
-
-
-
-
-
-
 
 
 
         </div>
     </div>
 
-
-
     <?php
     
     include("includes/footer.php");
     
     ?>
-
-
-
-
-
-
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.min.js"></script>
 
