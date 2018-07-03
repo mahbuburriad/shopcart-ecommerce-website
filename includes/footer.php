@@ -145,12 +145,15 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
             <p class="pull-left">
                 <?php 
             $ipn = getRealUserIp();
+            
              
- $json  = file_get_contents("https://freegeoip.net/json/$ipn");
+ 
+ $json  = file_get_contents("http://api.ipstack.com/$ipn?access_key=a6df04d294a0fb365fe76ad6b58723cf");
  $json  =  json_decode($json ,true);
  $country =  $json['country_name'];
  $region= $json['region_name'];
  $city = $json['city'];
+
             echo 'Your IP is: '.$ipn.', '.$country.', '.$region.', '.$city; ?> </p>
 
         </div>

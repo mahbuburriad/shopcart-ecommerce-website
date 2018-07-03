@@ -319,12 +319,12 @@ else
                         <?php
                         $ipn = getRealUserIp();
              
- $json  = file_get_contents("https://freegeoip.net/json/$ipn");
+ $json  = file_get_contents("http://api.ipstack.com/$ipn?access_key=a6df04d294a0fb365fe76ad6b58723cf");
  $json  =  json_decode($json ,true);
  $countryip =  $json['country_name'];
 $regionss= $json['region_name'];
  $cityss = $json['city'];
- $zip_codes = $json['zip_code'];
+ $zip_codes = $json['zip'];
       ?>
 
 
