@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2018 at 12:00 PM
+-- Generation Time: Jul 06, 2018 at 06:13 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -61,14 +61,6 @@ CREATE TABLE `cart` (
   `p_price` int(55) NOT NULL,
   `size` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
-(3, '::1', 2, 1000, 'Large'),
-(7, '::1', 5, 400, 'Medium');
 
 -- --------------------------------------------------------
 
