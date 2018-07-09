@@ -269,7 +269,7 @@ else
             <div class="alert alert-danger">
                 <center>
                     <strong>Warning! </strong> Please Confirm Through Your Email. If you have not recieved your confirmation email
-                    <a href="my_account.php?send_email" class="alert-link">Send E-mail Again</a>
+                    <a href="customer/my_account.php?send_email" class="alert-link">Send E-mail Again</a>
 
                 </center>
 

@@ -136,13 +136,13 @@ else
 
             </button>
 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+<!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
 
                 <i class="fa fa-search" ></i>
 
-            </button>
+            </button>-->
 
 
             </div>
@@ -198,7 +198,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-                <div class="navbar-collapse collapse right">
+<!--                <div class="navbar-collapse collapse right">
 
 
                     <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -236,7 +236,7 @@ else
 
                     </form>
 
-                </div>
+                </div>-->
 
             </div>
 
@@ -450,7 +450,7 @@ $regionss= $json['region_name'];
                                
                                $customer_confirm_code = mt_rand();
 $subject = "Shopcart Email Confirmation Message";
-$from = "noreply@shopcartbd.cf";
+$from = "mahbubur.riad@gmail.com";
 $message = "
 <h2>
 Hey $c_name,

@@ -154,7 +154,7 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
  $region= $json['region_name'];
  $city = $json['city'];
 
-            echo 'Your IP is: '.$ipn.', '.$country.', '.$region.', '.$city; ?> </p>
+            echo "Your IP is: '.$ipn.', '.$city.', '.$region.', '.$country'"; ?> </p>
 
         </div>
     </div>

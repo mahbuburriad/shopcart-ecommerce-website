@@ -148,7 +148,7 @@ else
                 <i class="fa fa-align-justify"></i>
 
             </button>
-
+                    <!--
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
@@ -156,7 +156,7 @@ else
                 <i class="fa fa-search" ></i>
 
             </button>
-
+-->
 
                 </div>
 
@@ -209,7 +209,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-                    <div class="navbar-collapse collapse right">
+                    <!--                    <div class="navbar-collapse collapse right">
 
 
                         <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -247,7 +247,7 @@ else
 
                         </form>
 
-                    </div>
+                    </div>-->
 
                 </div>
 
@@ -327,12 +327,64 @@ else
     if(isset($_GET['send_email'])){
         
         $subject = "Shopcart Email Confirmation Message";
-$from = "admin@shopcartbd.cf";
+$from = "mahbubur.riad@gmail.com";
 $message = "
 <h2>
-Email Confirmation By Shopcart $c_name
+Hey $c_name,
 </h2>
-<a href='http://shopcartbd.cf/customer/my_account.php?$customer_confirm_code'>
+
+
+We received a request to set your email to $c_email. If this is correct, please confirm by clicking the button below. If you don’t know why you got this email, please tell us straight away so we can fix this for you.
+
+<p>
+Information That save in our database
+</p>
+
+<table style='border:2px solid black;'>
+  <tr>
+    <th>Name</th>
+    <td>$c_name</td>
+    </tr>
+    <tr>
+    <th>E-mail</th> 
+    <td>$c_email</td> 
+    </tr>
+    <tr>
+    <th>Pass</th>
+     <td>$c_pass</td> 
+    </tr>
+    <tr>
+    <th>Country</th>
+    <td>$c_country</td>
+    </tr>
+    <tr>
+    <th>City</th>
+    <td>$c_city</td>
+    </tr>
+    <tr>
+    <th>Contact</th>
+    <td>$c_contact</td>
+    </tr>
+    <tr>
+    <th>Zipcode</th>
+    <td>$c_zipcode</td>
+    </tr>
+    <tr>
+    <th>Gender</th>
+    <td>$c_gender</td>
+    </tr>
+    <tr>
+    <th>Address</th>
+    <td>$c_address</td>
+    </tr>
+    </tr>
+    
+
+</table>
+<br>
+<br>
+
+<a style='background-color: #af0c42; text-decoration: none; padding: 10px; font-size: 130%; color: white; margin-top:20px;' href='http://shopcartbd.cf/customer/my_account.php?$customer_confirm_code'>
 Click Here To Confirm Email
 </a>
 ";

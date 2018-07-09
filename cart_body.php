@@ -135,13 +135,13 @@ else
 
             </button>
 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                <!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
 
                 <i class="fa fa-search" ></i>
 
-            </button>
+            </button>-->
 
 
 
@@ -196,7 +196,7 @@ else
                     <i class="fa fa-shopping-cart"></i>
                     <span><?php items(); ?> items in Cart</span>
                 </a>
-
+                <!--
                 <div class="navbar-collapse collapse right">
 
 
@@ -235,7 +235,7 @@ else
 
                     </form>
 
-                </div>
+                </div>-->
 
             </div>
 
@@ -281,7 +281,7 @@ else
                     <div class="alert alert-danger">
                         <center>
                             <strong>Warning! </strong> Please Confirm Through Your Email. If you have not recieved your confirmation email
-                            <a href="my_account.php?send_email" class="alert-link">Send E-mail Again</a>
+                            <a href="customer/my_account.php?send_email" class="alert-link">Send E-mail Again</a>
 
                         </center>
 

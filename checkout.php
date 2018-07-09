@@ -3,7 +3,7 @@ session_start();
 
 include("includes/connection.php");
 
-include("functions/functions.php")
+include("functions/functions.php");
 ?>
 
 
@@ -135,14 +135,14 @@ else
                 <i class="fa fa-align-justify"></i>
 
             </button>
-
+<!--
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
 
                 <i class="fa fa-search" ></i>
 
-            </button>
+            </button>-->
 
 
             </div>
@@ -199,7 +199,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-                <div class="navbar-collapse collapse right">
+<!--                <div class="navbar-collapse collapse right">
 
 
                     <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -237,7 +237,7 @@ else
 
                     </form>
 
-                </div>
+                </div>-->
 
             </div>
 
