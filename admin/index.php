@@ -160,6 +160,9 @@ $count_pending_orders = mysqli_num_rows($run_pending_orders);
     if(isset($_GET['delete_slide'])){
     include("delete_slide.php");
     }
+    if(isset($_GET['delete_p_request'])){
+    include("delete_p_request.php");
+    }
 
 
     if(isset($_GET['edit_slide'])){
@@ -227,6 +230,10 @@ $count_pending_orders = mysqli_num_rows($run_pending_orders);
     }
     if(isset($_GET['admin_profile'])){
     include("admin_profile.php");
+    }
+    
+    if(isset($_GET['product_request'])){
+    include("view_product_request.php");
     }
     
     

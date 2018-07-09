@@ -93,9 +93,10 @@ else{
 
                     <ul id="products" class="collapse">
 
-                        <li><a href="index.php?insert_product">Insert Products</a></li>
+                        <li><a href="index.php?insert_product"> Insert Products</a></li>
 
-                        <li><a href="index.php?view_product">View Products</a></li>
+                        <li><a href="index.php?view_product"> View Products</a></li>
+                        <li><a href="index.php?product_request"> View Product Request</a></li>
 
 
                     </ul>
@@ -116,9 +117,9 @@ else{
 
                     <ul id="p_cat" class="collapse">
 
-                        <li><a href="index.php?insert_p_cat">Insert Products Category</a></li>
+                        <li><a href="index.php?insert_p_cat"> Insert Products Category</a></li>
 
-                        <li><a href="index.php?view_p_cat">View Products Category</a></li>
+                        <li><a href="index.php?view_p_cat"> View Products Category</a></li>
 
 
                     </ul>
@@ -139,9 +140,9 @@ else{
 
                     <ul id="cat" class="collapse">
 
-                        <li><a href="index.php?insert_cat">Insert Category</a></li>
+                        <li><a href="index.php?insert_cat"> Insert Category</a></li>
 
-                        <li><a href="index.php?view_cat">View Category</a></li>
+                        <li><a href="index.php?view_cat"> View Category</a></li>
 
 
                     </ul>
@@ -200,17 +201,17 @@ else{
                 </li>
 
                 <li>
-                    <a href="index.php?view_customers"><i class="fa fa-fw fa-edit"></i>View Customers</a>
+                    <a href="index.php?view_customers"><i class="fa fa-fw fa-edit"></i> View Customers</a>
 
                 </li>
 
                 <li>
-                    <a href="index.php?view_orders"><i class="fa fa-fw fa-list"></i>View Orders</a>
+                    <a href="index.php?view_orders"><i class="fa fa-fw fa-list"></i> View Orders</a>
 
                 </li>
 
                 <li>
-                    <a href="index.php?view_payments"><i class="fas fa-money-check-alt"></i>View Payments</a>
+                    <a href="index.php?view_payments"><i class="fas fa-money-check-alt"></i> View Payments</a>
 
                 </li>
 
