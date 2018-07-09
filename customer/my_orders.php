@@ -2,7 +2,7 @@
 
     <h1>My Order</h1>
     <p class="lead"> Your on one place </p>
-    <p class="text-muted">If you have any question.......................xxxxxxxxx</p>
+    <p class="text-muted">You can see your order list here</p>
 
 </center>
 

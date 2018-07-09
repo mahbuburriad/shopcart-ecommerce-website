@@ -317,7 +317,7 @@ else
                             <h2>Contact Us</h2>
 
                             <p class="text-muted">
-                                If You have any Question............................
+                                If You have any Question please share with us. we will catch you as soon as possible
 
                             </p>
                         </center>
@@ -356,7 +356,7 @@ else
 
                         <div class="form-group">
                             <label for="">Message</label>
-                            <!--<textarea name="massage" class="form-control"></textarea>-->
+
                             <textarea name="message" class="form-control" id="" cols="30" rows="10"></textarea>
 
                         </div>

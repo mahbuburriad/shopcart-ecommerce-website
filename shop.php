@@ -308,7 +308,7 @@ else
                         
                         <h1>Shop</h1>
                         
-                        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                        <p>Shopping with fun and Trust. Every product condition is good. we keep the value of customer;s trust</p>
                         
                         </div>
                         

@@ -21,8 +21,9 @@
 
                 <h4>User Selection</h4>
                 <ul>
-                    <li><a href="checout.php">Login</a></li>
+
                     <li><a href="customer_register.php">Resister</a></li>
+                    <li><a href="checkout.php">Login</a></li>
 
                 </ul>
 
@@ -63,10 +64,12 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
             <div class="col-md-3 col-sm-6">
 
                 <h4>Where to find Us</h4>
-                <p> <strong>ShopCart</strong> <br> North South University<br> Bashundhara Baridhara, Dhaka 1229<br> Dhaka
-                    <br> 017XXXXXXX
-                    <br> admin@shopcart.com
+                <p> <strong>Shopcartbd</strong> <br> North South University<br> Bashundhara Baridhara, Dhaka 1229<br> Dhaka
+                    <br> 01711574805
+                    <br> mahbubur.riad@outlook.com
                     <br>
+                    <strong>Admins</strong><br>
+
 
                     <strong> Mysha Rahman <br> Mahbubur Rahman </strong>
                 </p>
@@ -82,7 +85,7 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
                 <h4>Get The News</h4>
                 <p class="text-muted">
 
-                    news news newsnewsnews news news newsnewsnews news news
+                    If any types of product update we will notify you as soon as possible. so please subscribe
                 </p>
 
                 <form action="" method="post">
