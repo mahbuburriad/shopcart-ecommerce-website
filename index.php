@@ -382,6 +382,7 @@ else
                         <h3><a href="#">We Love Our Customers</a></h3>
                         <p>
                             We are known to provide best possible service ever
+
                         </p>
 
                     </div>
@@ -397,9 +398,9 @@ else
 
                         </div>
 
-                        <h3><a href="#">Best Price</a></h3>
+                        <h3><a href="#">Resonable Price</a></h3>
                         <p>
-                            You can check on all others site and blah blah blah
+                            Every products has included with MRP. and many products has already discounted by company.
                         </p>
 
                     </div>
@@ -411,13 +412,14 @@ else
                     <div class="box same-height">
 
                         <div class="icon">
-                            <i class="fa fa-tags"></i>
+                            <i class="fas fa-calendar-check"></i>
 
                         </div>
 
                         <h3><a href="#">100% safety</a></h3>
                         <p>
-                            Here some likha likhi Here some likha likhi Here some likha likhi
+                            Guaranteed price with better quality and money back guarantee if have problem with product
+
                         </p>
 
                     </div>
