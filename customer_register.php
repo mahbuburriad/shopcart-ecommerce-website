@@ -136,7 +136,7 @@ else
 
             </button>
 
-<!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                <!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
 
@@ -198,7 +198,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-<!--                <div class="navbar-collapse collapse right">
+                <!--                <div class="navbar-collapse collapse right">
 
 
                     <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -333,14 +333,15 @@ $regionss= $json['region_name'];
                                 <div class="col-md-6">
 
                                     <label for="">Password</label>
-                                    <input type="password" class="form-control" name="c_pass" required placeholder="Enter Password">
+                                    <input type="password" id="pass" class="form-control" name="c_pass" required placeholder="Enter Password">
                                 </div>
 
                                 <div class="col-md-6">
 
                                     <label for="">Confirm Password</label>
-                                    <input type="password" class="form-control" name="conf_pass" required placeholder="Enter Password Again">
+                                    <input type="password" id="cpass" class="form-control" name="conf_pass" required placeholder="Enter Password Again">
                                 </div>
+
 
                             </div>
                             <p id="text"></p>
@@ -365,9 +366,19 @@ $regionss= $json['region_name'];
                                     <label for="">Enter Mobile No</label>
                                     <input type="text" class="form-control" name="c_contact" required placeholder="Enter Mobile No">
                                 </div>
-                                <div class="col-md-6">
+                                <!--<div class="col-md-6">
                                     <label for="">Gender</label>
                                     <input type="text" class="form-control" name="c_gender" required placeholder="Enter Your Gender">
+
+                                </div>-->
+
+                                <div class="col-md-6">
+                                    <label for="">Gender</label>
+                                    <select class="form-control" name="c_gender">
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
 
                                 </div>
 
@@ -410,6 +421,20 @@ $regionss= $json['region_name'];
                          </button>
                             </div>
                     </form>
+
+                    <script type="text/javascript">
+                        $("#submit").submit(function() {
+                            var pass = $("#pass").val();
+                            var cpass = $("#cpass").val();
+
+                            if (pass != cpass) {
+                                alert("ds");
+
+                            }
+
+                        });
+
+                    </script>
                 </div>
             </div>
 
@@ -423,8 +448,10 @@ $regionss= $json['region_name'];
     include("includes/footer.php");
     
     ?>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+
+
+
+
 
 </body>
 
