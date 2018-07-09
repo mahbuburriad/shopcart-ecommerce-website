@@ -291,6 +291,7 @@ else
                     <li data-target="#myCarousel" data-slide-to="2"> </li>
                     <li data-target="#myCarousel" data-slide-to="3"> </li>
                 </ol>
+
                 <div class="carousel-inner image-slide-size">
                     <?php
 
@@ -305,12 +306,20 @@ else
                         <div class='item active img-responsive'>
 
     <img src='admin/slides_images/$slide_image'></a>
+    <div class='carousel-caption'>
+    <h1 style='color: blue;'>Shopping with Trust </h1>
+    <button class='btn btn-primary' style='color: white;'><a href='shop.php'>Go to Shop</a></button>
+    <p style='color: blue;'>Find The best option for shopping </p>
+   
+  </div>
 
 </div>
                         
 
 
 "; }
+                    
+                    
                     
                     ?>
 
@@ -466,15 +475,6 @@ else
     include("includes/footer.php")
     
     ?>
-
-
-
-
-
-
-
-
-
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.min.js"></script>
 

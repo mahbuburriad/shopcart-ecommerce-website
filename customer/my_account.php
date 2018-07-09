@@ -461,8 +461,8 @@ echo "<script>window.open('my_account.php?my_orders','_self')</script>";
     include("../includes/footer.php");
     
     ?>
-            <script src="../js/bootstrap.min.js"></script>
-            <script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 
     </body>
 

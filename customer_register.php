@@ -451,7 +451,8 @@ $regionss= $json['region_name'];
 
 
 
-
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
 
 </body>
 

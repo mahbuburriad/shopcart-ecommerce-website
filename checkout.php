@@ -135,7 +135,7 @@ else
                 <i class="fa fa-align-justify"></i>
 
             </button>
-<!--
+                <!--
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
@@ -199,7 +199,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-<!--                <div class="navbar-collapse collapse right">
+                <!--                <div class="navbar-collapse collapse right">
 
 
                     <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
