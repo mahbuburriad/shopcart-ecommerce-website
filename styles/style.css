@@ -734,3 +734,8 @@ button:hover {
     opacity: 0.5;
     text-decoration: none;
 }
+
+#mainImage .carousel-inner img {
+    height: 500px;
+    width: 800px;
+}
