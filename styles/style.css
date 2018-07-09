@@ -739,3 +739,49 @@ button:hover {
     height: 500px;
     width: 800px;
 }
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 2s linear infinite;
+}
+
+.box1 {
+    background: #ff6540;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transform: perspective(1000px) rotateY(25deg);
+
+
+}
+
+.box1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    background: #d24c2c;
+    transform-style: preserve-3d;
+    transform-origin: right;
+    transform: perspective(1000px) rotateY(-25deg);
+
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -30%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}

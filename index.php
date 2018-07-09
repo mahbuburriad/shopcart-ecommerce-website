@@ -436,6 +436,7 @@ else
     </div>
 
 
+
     <div id="hot">
 
         <div class="box">
@@ -443,7 +444,16 @@ else
             <div class="container">
                 <div class="col-md-12">
 
-                    <h2>Latest This week</h2>
+                    <h2 style="color: purple">Latest This week</h2>
+
+
+
+
+
+
+
+
+
 
                 </div>
 
