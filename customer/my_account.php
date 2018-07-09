@@ -88,7 +88,7 @@ else
                             }
                             else
                             {
-                                echo "<a href='customer/my_account.php?profile'>Profile</a>";
+                                echo "<a href='my_account.php?profile'>Profile</a>";
                             }
                             ?>
                             </li>
