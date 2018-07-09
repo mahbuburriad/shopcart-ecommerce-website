@@ -120,7 +120,7 @@ else
 
             </button>
 
-<!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+                <!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
 
                 <span class="sr-only" >Toggle Search</span>
 
@@ -182,7 +182,7 @@ else
                     <span><?php items(); ?> items in Cart</span>
                 </a>
 
-    <!--            <div class="navbar-collapse collapse right">
+                <!--            <div class="navbar-collapse collapse right">
 
 
                     <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
@@ -379,13 +379,13 @@ else
                         $sender_email = $_POST['email'];
                         $sender_subject = $_POST['subject'];
                         $sender_message = $_POST['message'];
-                        $receiver_email = "admin@shopcartbd.cf";
+                        $receiver_email = "mahbubur.riad@gmail.com";
                         mail($receiver_email,$sender_name,$sender_subject,$sender_message,$sender_email);
                         
                         $email = $_POST['email'];
                         $subject = "Welcome to Shopcart";
                         $msg = "I shall get you soon, thanks for sending us email";
-                        $sendmail_from = "admin@shopcartbd.cf";
+                        $sendmail_from = "mahbubur.riad@gmail.com";
                         mail($email,$subject,$msg,$sendmail_from);
                         
                         echo "<h2 align='center'>Your Message has been sent successfully</h2>";
