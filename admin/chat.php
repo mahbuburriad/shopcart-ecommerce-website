@@ -31,7 +31,7 @@ else {
 
     <div class="row">
 
-        <iframe src="https://drift.com" frameborder="0" height="800px" width="1650px"></iframe>
+        <iframe src="https://drift.com/" frameborder="0" height="800px" width="1650px"></iframe>
 
 
 

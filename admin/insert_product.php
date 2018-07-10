@@ -23,6 +23,7 @@ else{
             tinymce.init({
                 selector: 'textarea'
             });
+
         </script>
     </head>
 
@@ -254,7 +255,7 @@ if(isset($_POST['submit'])){
         
         <script>
         
-        windows.open('index.php?view_products', '_self');
+        windows.open('index.php?view_product', '_self');
         
         
         </script>
