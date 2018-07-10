@@ -15,12 +15,14 @@ else{
     <head>
         <meta charset="UTF-8">
         <title>Insert Products</title>
+
+
+
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
         <script>
             tinymce.init({
                 selector: 'textarea'
             });
-
         </script>
     </head>
 
