@@ -236,6 +236,10 @@ $count_pending_orders = mysqli_num_rows($run_pending_orders);
     include("view_product_request.php");
     }
     
+    if(isset($_GET['chat'])){
+    include("chat.php");
+    }
+    
                     ?>
 
 

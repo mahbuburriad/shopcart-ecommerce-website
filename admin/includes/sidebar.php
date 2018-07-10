@@ -215,6 +215,11 @@ else{
 
                 </li>
 
+                <li>
+                    <a href="index.php?chat"><i class="far fa-comments"></i> Chat</a>
+
+                </li>
+
 
                 <li>
 
