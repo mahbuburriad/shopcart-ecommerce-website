@@ -5,8 +5,8 @@
         <li role="separator" class="divider"></li>
         <li><a href="app/shopcart.apk">Site APP</a></li>
 
-        <li role="separator" class="divider"></li>
-        <li><a href="#">ChatBot</a></li>
+        <!--<li role="separator" class="divider"></li>
+        <li><a href="#">ChatBot</a></li>-->
         <li role="separator" class="divider"></li>
         <li><a href="review.php">Review</a></li>
     </ul>
