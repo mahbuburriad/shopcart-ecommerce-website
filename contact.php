@@ -131,8 +131,8 @@ else
                 <a class="navbar-brand home" href="index.php">
                    
 
-                    <img src="images/logo-large.PNG"  class="hidden-xs">
-                    <img src="images/logo-small.png"  class="visible-xs">
+                    <img src="images/logo-large.PNG" class="hidden-xs" alt="shopcart logo">
+                    <img src="images/logo-small.PNG" class="visible-xs" alt="shopcart logo">
 
                 </a>
 
