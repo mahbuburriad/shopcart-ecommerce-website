@@ -785,3 +785,11 @@ button:hover {
         transform: translate(-50%, -50%);
     }
 }
+
+@media (max-width: 350px) {
+    #slideimage .carousel-inner img {
+        height: 250px !important;
+        width: 300px !important;
+
+    }
+}
