@@ -308,17 +308,18 @@ else
     <div class="container" id="slider">
 
         <div class="col-md-12">
+            <div id="slideimage">
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"> </li>
-                    <li data-target="#myCarousel" data-slide-to="1"> </li>
-                    <li data-target="#myCarousel" data-slide-to="2"> </li>
-                    <li data-target="#myCarousel" data-slide-to="3"> </li>
-                </ol>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"> </li>
+                        <li data-target="#myCarousel" data-slide-to="1"> </li>
+                        <li data-target="#myCarousel" data-slide-to="2"> </li>
+                        <li data-target="#myCarousel" data-slide-to="3"> </li>
+                    </ol>
 
-                <div class="carousel-inner image-slide-size">
-                    <?php
+                    <div class="carousel-inner image-slide-size">
+                        <?php
 
                     $get_slides = "SELECT slide_id, slide_name, slide_image FROM slider LIMIT 0,1";
                     $run_slides = mysqli_query($con,$get_slides);
@@ -349,7 +350,7 @@ else
                     ?>
 
 
-                        <?php
+                            <?php
 
                     $get_slides = "SELECT slide_id, slide_name, slide_image FROM slider LIMIT 1,3";
                     $run_slides = mysqli_query($con,$get_slides);
@@ -378,9 +379,11 @@ else
 
 
 
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span> </a>
                 </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span> </a>
+
             </div>
 
 
