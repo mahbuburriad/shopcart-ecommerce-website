@@ -349,8 +349,11 @@ else
                     </div>
 
                     <div id="map-container-3" class="z-depth-1"></div>
+                                
+                                <div class="embed-responsive embed-responsive-16by9">
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2288.395537089797!2d90.42416824201436!3d23.81765575086424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth+South+University!5e1!3m2!1sen!2sbd!4v1528372007726" width="780" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2288.395537089797!2d90.42416824201436!3d23.81765575086424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth+South+University!5e1!3m2!1sen!2sbd!4v1528372007726" allowfullscreen></iframe>
+                                </div>
 
 
 

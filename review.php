@@ -340,9 +340,10 @@ else
 
             <div class="col-md-9">
                 <div class="box">
-                    <div class="box-header">
+                <div class="box-header">Please review about our site</div>
+                    <div class="embed-responsive embed-responsive-16by9">
 
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1OfAEyqbha2nHgGKYr8c9l2w7KS3vmdHYdDuZjrp9wBJ47w/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                        <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSc1OfAEyqbha2nHgGKYr8c9l2w7KS3vmdHYdDuZjrp9wBJ47w/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
                     </div>
                 </div>
             </div>
