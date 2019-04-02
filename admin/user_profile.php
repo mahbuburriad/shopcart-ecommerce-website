@@ -27,11 +27,7 @@ $admin_country = $row_admin['admin_country'];
 $admin_job = $row_admin['admin_job'];
 $admin_contact = $row_admin['admin_contact'];
 $admin_about = $row_admin['admin_about'];
-
 }
-
-
-
 ?>
 
 
