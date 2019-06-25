@@ -1,11 +1,5 @@
 <?php
-
 $db = mysqli_connect("localhost", "root", "", "shopcart");
-
-
-
-
-
 
 function getProducts(){
     global $db;
